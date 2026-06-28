@@ -1,0 +1,17 @@
+repository: mobius-provider-engine
+version: 0.1.0
+status: alpha
+layer: provider-orchestration
+department: Provider Engine
+service: Provider Orchestration
+mission: Select, execute, verify, and record provider work while remaining model-agnostic.
+capabilities:
+  - provider-adapters
+  - provider-registry
+  - task-envelope-execution
+  - baseline-verification
+  - provider-executed-event
+quality_gates:
+  adapter_contract_required: true
+  verification_required: true
+  provider_lock_in_forbidden: true
