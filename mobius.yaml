@@ -1,0 +1,38 @@
+mobius:
+  repository: mobius-provider-engine
+  product: Mobius Platform
+  capability: Provider Orchestration
+  department: Provider Engine
+  owner: Mobius Technologies
+  mission: Execute provider work through model-agnostic adapters.
+  maturity: implemented
+  consumes:
+    - RouteSelected
+    - TaskEnvelope
+  produces:
+    - ProviderExecuted
+    - ExecutionResult
+  schemas:
+    - ProviderAdapter
+    - TaskEnvelope
+    - ExecutionResult
+    - ProviderExecutedEvent
+  events:
+    - ProviderExecuted
+  dependencies:
+    - mobius-schema
+    - mobius-router
+  dependents:
+    - mobius-memory
+    - mobius-pulse
+    - mobius-command-center
+  pulse_metrics:
+    - execution-latency
+    - execution-success-rate
+    - provider-confidence
+  memory_events:
+    - provider-execution-recorded
+  architecture_version: Enterprise Alpha v0.1
+  genesis_version: Genesis v1.0
+  canon_version: Canon v1.0
+  sync_status: synchronized
